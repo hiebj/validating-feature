@@ -1,0 +1,6 @@
+.x-grid-cell-invalid {
+    margin-top: -1px;
+    border-right: 1px dotted #cf4c35;
+    border-bottom: 1px solid #cf4c35;
+    border-left: 1px dotted #cf4c35;
+}
