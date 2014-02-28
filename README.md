@@ -4,9 +4,9 @@ For a live example, check out the Fiddle: https://fiddle.sencha.com/#fiddle/1b3
 
 Automatic Validation
 ------------------
-The validation process relies on Ext.data.validations configured on an Ext.data.Model. To determine a record's validity, Ext.data.Model#validate method is called. If a field of a record fails validation, its representative grid cell will be painted with an invalid CSS class and a tooltip containing the returned error messages.
+The validation process relies on Ext.data.validations configured on an Ext.data.Model. To determine a record's validity, the Ext.data.Model#validate method is called. If a field of a record fails validation, its representative grid cell will be painted with an invalid CSS class and a tooltip containing the returned error messages.
 
-Validation occurs automatically when a record is updated. When the record is repainted by the View on Ext.data.Store#update, our cellTpl will apply error CSS and tooltips based on the result of a call to the Ext.data.Model#validate function. Records which are not dirty (have not been updated) are validated only by an explicit call to validate.
+Validation occurs automatically when a record is updated. When the record is repainted by the View on Ext.data.Store#update, our cellTpl will apply error CSS and tooltips based on the result of a call to the Ext.data.Model#validate function. Records which are not dirty (have not been updated) are validated only by an explicit call to #validate.
 
 The CSS and tooltip are applied using the capabilities of a grid Feature, namely by manipulating Ext.view.Table#cellTpl.
 
