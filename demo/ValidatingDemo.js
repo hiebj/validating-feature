@@ -23,7 +23,7 @@ Ext.define('Plant', {
 		type: 'presence',
 		field: 'botanical'
 	},
-	// Throw in some custom validations for fun.
+	// Throw in some custom validations.
 	{
 		type: 'min',
 		field: 'price',
@@ -35,7 +35,10 @@ Ext.define('Plant', {
 		message: 'must be after 7/21/1989, but no later than today',
 		minimum: new Date(1989, 7, 21),
 		maximum: new Date()
-	}, {
+	},
+	// For fun, a more complex validaton requiring 'sunny' plants to be
+	// outdoor plants, and 'shady' plants to be indoors.
+	{
 		type: 'indoor',
 		field: 'light'
 	}, {
@@ -101,13 +104,13 @@ Ext.onReady(function() {
 		} ],
 		columns: [
 				{
-		            text: 'Common Name',
-		            dataIndex: 'common',
-		            flex: 1,
-		            editor: {
-		                xtype: 'textfield'
-		            }
-		        },
+					text: 'Common Name',
+					dataIndex: 'common',
+					flex: 1,
+					editor: {
+						xtype: 'textfield'
+					}
+				},
 				{
 					text: 'Botanical Name',
 					dataIndex: 'botanical',
